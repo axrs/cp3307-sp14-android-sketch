@@ -18,6 +18,12 @@ public class CanvasView extends View {
         super(context, attrs);
     }
 
+    public void clearCanvas(){
+        canvas = null;
+        canvasBitmap = null;
+        invalidate();
+    }
+
     public Bitmap getCanvasBitmap() {
         if (canvasBitmap == null) {
             canvasBitmap = Bitmap.createBitmap(this.getWidth(), this.getHeight(), Bitmap.Config.ARGB_8888);
@@ -46,7 +52,6 @@ public class CanvasView extends View {
         }
         return path;
     }
-
 
     /**
      * Gets the current drawing pen
