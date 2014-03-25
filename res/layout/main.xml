@@ -9,7 +9,10 @@
             android:layout_height="fill_parent">
         <view android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              class="com.cadcoder.sketch.CanvasView" android:id="@+id/view" android:layout_weight=".15"/>
+              class="com.cadcoder.sketch.CanvasView"
+              android:id="@+id/sketch"
+              android:layout_weight=".15"
+                />
         <Button
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"

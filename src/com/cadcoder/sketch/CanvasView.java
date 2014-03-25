@@ -18,7 +18,7 @@ public class CanvasView extends View {
         super(context, attrs);
     }
 
-    public void clearCanvas(){
+    public void clearCanvas() {
         canvas = null;
         canvasBitmap = null;
         invalidate();
@@ -61,7 +61,7 @@ public class CanvasView extends View {
     public Paint getPen() {
         if (pen == null) {
             pen = new Paint();
-            pen.setColor(Color.parseColor("#084887"));
+            pen.setColor(Color.BLUE);
             pen.setAntiAlias(true);
 
             pen.setStrokeWidth(8);
@@ -70,6 +70,22 @@ public class CanvasView extends View {
             pen.setStrokeCap(Paint.Cap.ROUND);
         }
         return pen;
+    }
+
+    public void setStrokeWidth(int width) {
+        getPen().setStrokeWidth(width);
+    }
+
+    public int getStrokeWidth() {
+        return (int) getPen().getStrokeWidth();
+    }
+
+    public int getPenColor() {
+        return getPen().getColor();
+    }
+
+    public void setPenColor(int c) {
+        getPen().setColor(c);
     }
 
     /**
